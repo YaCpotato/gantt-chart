@@ -1,17 +1,32 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <svg id="gantt"></svg>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Gantt from "frappe-gantt" 
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      tasks:[
+        {
+	id: 'Task 1',
+	name: 'Redesign website',
+	start: '2016-12-28',
+	end: '2016-12-31',
+	progress: 20,
+	dependencies: 'Task 2, Task 3'
+  }
+      ],
+      gantt: null
+    }
+  },
+  mounted () {
+    this.gantt = new Gantt("#gantt", this.tasks);
   }
 }
 </script>
