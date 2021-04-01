@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Header />
     <img alt="Vue logo" src="./assets/logo.png">
     <div class="gantt-area">
       <svg id="gantt"></svg>
@@ -20,8 +21,12 @@
 import Gantt from 'frappe-gantt'
 import './store'
 import Task from './model/Task'
+import Header from './Header'
 export default {
   name: 'App',
+  components: {
+    Header
+  },
   data () {
     return {
       project: {
