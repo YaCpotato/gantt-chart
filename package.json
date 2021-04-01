@@ -11,6 +11,7 @@
     "@vuex-orm/core": "^0.36.3",
     "core-js": "^3.6.5",
     "frappe-gantt": "^0.5.0",
+    "moment": "^2.29.1",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "vue": "^2.6.12",
