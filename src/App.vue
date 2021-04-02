@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <img alt="Vue logo" src="./assets/logo.png">
+    <PanelAndModal />
     <div class="gantt-area">
       <svg id="gantt"></svg>
     </div>
@@ -22,10 +22,13 @@ import Gantt from 'frappe-gantt'
 import './store'
 import Task from './model/Task'
 import Header from './Header'
+import PanelAndModal from './PanelAndModal'
+
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    PanelAndModal
   },
   data () {
     return {
@@ -95,7 +98,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 .gantt-area {
