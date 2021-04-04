@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <PanelAndModal />
+    <Modal />
     <div class="gantt-area">
       <svg id="gantt"></svg>
     </div>
@@ -22,13 +22,13 @@ import Gantt from 'frappe-gantt'
 import './store'
 import Task from './model/Task'
 import Header from './Header'
-import PanelAndModal from './PanelAndModal'
+import Modal from './Modal'
 
 export default {
   name: 'App',
   components: {
     Header,
-    PanelAndModal
+    Modal
   },
   data () {
     return {
