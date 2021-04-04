@@ -1,15 +1,26 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <button v-on:click="show" class="button">show!</button>
+    <sweet-modal :ref="modal">
+      <div class="modal-header">
+        <h2>Modal title</h2>
+      </div>
+      <div class="modal-body">
+        <p>you're reading this text in a modal!</p>
+        <button v-on:click="hide">閉じる</button>
+      </div>  
+    </sweet-modal>
+  </div>
 </template>
 
 <script>
 import './store'
 import Task from './model/Task'
-import VModal from 'vue-js-modal'
+import  SweetModal from 'sweet-modal-vue'
 
 export default {
   components:{
-    VModal
+    SweetModal
   },
   data () {
     return {
@@ -40,10 +51,11 @@ export default {
         this.task = Task.query().where('project_id',this.project.id).get()
       },
       show () {
-      this.$modal.show('hello-world');
+        console.log(this.$refs)
+        this.$refs.ref["modal"].open()
       },
       hide () {
-        this.$modal.hide('hello-world');
+        this.$refs.modal.close()
       },
     }
 }

@@ -80,13 +80,7 @@ export default {
     methods: {
       initialize () {
         this.task = Task.query().where('project_id',this.project.id).get()
-      },
-      show () {
-      this.$modal.show('hello-world');
-      },
-      hide () {
-        this.$modal.hide('hello-world');
-      },
+      }
     }
 }
 </script>
