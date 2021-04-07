@@ -4,8 +4,8 @@
       Toggle
     </button>
     <transition name="fade">
-      <div class = "modal-wrapper w-screen h-screen" v-if="isShow">
-        <div class = "modal border-gray-200">
+      <div class = "modal-wrapper w-screen h-screen block" v-if="isShow">
+        <div class = "modal border-gray-200 block">
           This is Modal
           <button v-on:click="isShow = !isShow">
             Toggle
@@ -51,6 +51,8 @@ export default {
   width: 80%;
   height: 70%;
   background: cornsilk;
+  margin:0 auto;
+  margin-top: 3rem;
 }
 
 .modal-header {
