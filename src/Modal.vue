@@ -5,11 +5,23 @@
     </button>
     <transition name="fade">
       <div class = "modal-wrapper w-screen h-screen block" v-if="isShow">
-        <div class = "modal border-gray-200 block">
-          This is Modal
-          <button v-on:click="isShow = !isShow">
-            Toggle
-          </button>
+        <div class = "modal border-gray-200 block divide-y-4 divide-black divide-opacity-25">
+          <div class = "modal-header">
+            This is Modal
+          </div>
+          <div class = "modal-body">
+            
+          </div>
+          <div class = "modal-footer">
+            <div class="right-area float-right">
+              <button v-on:click="isShow = !isShow">
+                Close
+              </button>
+            </div>
+            <div class="left-area float-left">
+              
+            </div>
+          </div>
         </div>
       </div>
     </transition>
@@ -50,19 +62,20 @@ export default {
 .modal {
   width: 80%;
   height: 70%;
-  background: cornsilk;
+  background: white;
   margin:0 auto;
   margin-top: 3rem;
+  padding:2rem;
 }
 
 .modal-header {
   padding:1rem;
-  height:20%;
+  height:10%;
 }
 
 .modal-body {
   padding:1rem;
-  height:60%;
+  height:80%;
 }
 
 .modal-footer {
