@@ -7,19 +7,21 @@
       <div class = "modal-wrapper w-screen h-screen block" v-if="isShow">
         <div class = "modal border-gray-200 block divide-y-4 divide-black divide-opacity-25">
           <div class = "modal-header">
-            This is Modal
+            <h3 class="modal-title text-lg text-left">This is Modal</h3>
           </div>
           <div class = "modal-body">
             
           </div>
           <div class = "modal-footer">
             <div class="right-area float-right">
-              <button v-on:click="isShow = !isShow">
-                Close
+              <button class= "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" v-on:click="isShow = !isShow">
+                Apply
               </button>
             </div>
             <div class="left-area float-left">
-              
+              <button class= "bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" v-on:click="isShow = !isShow">
+                Close
+              </button>
             </div>
           </div>
         </div>
